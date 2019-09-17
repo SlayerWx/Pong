@@ -1,20 +1,24 @@
 #ifndef Player_H
 #define Player_H
 #include "raylib.h"
-#include <iostream>
 class Player
 {
 private:
-	~Player();
 	Rectangle body;
 	float speed;
 	int score;
 	int globalScore;
 	Image mySkin;
 	Color myColor;
+	enum colorType
+	{
+		white, Red, Blue, green, Orange, Violet
+	};
+	colorType myColorType;
 public:
-	Player(int x,int y);
-	void move();
+	Player(int x,int y, int newSpeed,int height,int width);
+	~Player();
+	void move(colorType enemyColorType);
 	void checkCollision(Vector2 ballPosition, Vector2 ballVel);
 	void setColor(Color color);
 	Color getColor();
