@@ -13,7 +13,7 @@ Player::~Player()
 {
 
 }
-void Player::move(colorType enemyColorType)
+void Player::selectorMove(colorType enemyColorType)
 {
 	if (IsKeyDown(KEY_W) && body.y > 85)
 	{
@@ -33,22 +33,22 @@ void Player::move(colorType enemyColorType)
 	}
 	if (body.y < 130 && enemyColorType != Red)
 	{
-		myColor = RED;
+		body.myColor = RED;
 		myColorType = Red;
 	}
 	if (body.y > 160 && body.y < 195 && enemyColorType != Blue)
 	{
-		myColor = BLUE;
+		body.myColor = BLUE;
 		myColorType = Blue;
 	}
 	if (body.y > 230 && body.y < 250 && enemyColorType != Orange)
 	{
-		myColor = ORANGE;
+		body.myColor = ORANGE;
 		myColorType = Orange;
 	}
 	if (body.y > 285 && enemyColorType != Violet)
 	{
-		myColor = VIOLET;
+		body.myColor = VIOLET;
 		myColorType = Violet;
 	}
 }
@@ -57,11 +57,11 @@ void Player::checkCollision(Vector2 ballPosition,Vector2 ballVel)
 }
 void Player::setColor(Color color)
 {
-	myColor = color;
+	body.myColor = color;
 }
 Color Player::getColor()
 {
-	return myColor;
+	return body.myColor;
 }
 void Player::increaseScore()
 {
@@ -79,11 +79,15 @@ void Player::resetGlobalScore()
 {
 	globalScore = 0;
 }
-void Player::setSkin(Image skin)
+void Player::setSkin(Texture2D skin)
 {
 	mySkin = skin;
 }
-Image Player::getSkin() 
+Texture2D Player::getSkin() 
 {
 	return mySkin;
+}
+Rectangle Player::getRectangle()
+{
+	return body;
 }

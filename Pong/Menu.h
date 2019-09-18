@@ -7,7 +7,8 @@ private:
 	void drawOptionsColor();
 	void drawTitle(Vector2 pos, int fontSize, Color color);
 	void instrucctionsPlayer(int fontSize, int posY);
+	void PlayerSelectorDraw(Rectangle p1, Rectangle p2);
 public:
 	Menu(int _widthRecOptions,int _heightRecOptions);
-	void draw(Vector2 pos, int fontSize, Color color, int PosYInstrucctions);
+	void draw(Vector2 pos, int fontSize, Color color, int PosYInstrucctions,Rectangle p1, Rectangle p2);
 };

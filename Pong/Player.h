@@ -8,8 +8,7 @@ private:
 	float speed;
 	int score;
 	int globalScore;
-	Image mySkin;
-	Color myColor;
+	Texture2D mySkin;
 	enum colorType
 	{
 		white, Red, Blue, green, Orange, Violet
@@ -18,7 +17,7 @@ private:
 public:
 	Player(int x,int y, int newSpeed,int height,int width);
 	~Player();
-	void move(colorType enemyColorType);
+	void selectorMove(colorType enemyColorType);
 	void checkCollision(Vector2 ballPosition, Vector2 ballVel);
 	void setColor(Color color);
 	Color getColor();
@@ -26,8 +25,9 @@ public:
 	void increaseGlobalScore();
 	void resetScore();
 	void resetGlobalScore();
-	void setSkin(Image skin);
-	Image getSkin();
+	void setSkin(Texture2D skin);
+	Texture2D getSkin();
+	Rectangle getRectangle();
 
 };
 #endif
