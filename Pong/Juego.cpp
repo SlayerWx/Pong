@@ -1,6 +1,4 @@
 #include "Juego.h"
-#include "Player.h"
-#include "Menu.h"
 Game::Game()
 {
 	cout << "inicializando juego..." << endl;
@@ -8,7 +6,7 @@ Game::Game()
 
 Game::~Game()
 {
-	cout << "Juego finalizado... liberando memoria" << endl;
+	cout << "Juego finalizado..." << endl;
 }
 void Game::initGame()
 {
@@ -30,10 +28,13 @@ void Game::menu(bool &inMenu)
 {
 	const int maxScoreSet = 7;
 	Menu* menu = new Menu(370, 130);
-	Player* player1 = new Player(GetScreenWidth() / 6.20f, GetScreenHeight() / 3, 15, 100, 30);
-	Player* player2 = new Player(GetScreenWidth()/1.20f, GetScreenHeight() / 1.5f, 15, 100, 30);
+	Player* player1 = new Player(static_cast<int>(GetScreenWidth() / 6.20f), 
+								static_cast<int>(GetScreenHeight() / 3), 15, 100, 30);
+	Player* player2 = new Player(static_cast<int>(GetScreenWidth()/1.20f), 
+								static_cast<int>(GetScreenHeight() / 1.5f), 15, 100, 30);
 	while (inMenu && !WindowShouldClose())
 	{
+		menu->update(player1,player2);
 		menu->draw(Vector2{ GetScreenWidth() / 2.0f, 10.0f}, 50, WHITE,70,player1->getRectangle(),
 																		player2->getRectangle());
 	}

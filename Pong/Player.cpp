@@ -11,7 +11,7 @@ Player::Player(int x,int y,int newSpeed, int height, int width)
 }
 Player::~Player()
 {
-
+	cout << "Player Destruido" << endl;
 }
 void Player::selectorMove(colorType enemyColorType)
 {
@@ -90,4 +90,9 @@ Texture2D Player::getSkin()
 Rectangle Player::getRectangle()
 {
 	return body;
+}
+void Player::move(int x,int y) 
+{
+	body.x = x;
+	body.y = y;
 }

@@ -1,5 +1,9 @@
+#ifndef JUEGO_H
+#define JUEGO_H
 #include <iostream>
 #include "raylib.h"
+#include "Player.h"
+#include "Menu.h"
 using namespace std;
 class Game
 {
@@ -12,3 +16,4 @@ public:
 	~Game();
 
 };
+#endif

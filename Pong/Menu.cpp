@@ -6,7 +6,7 @@ Menu::Menu(int widthRecOptions, int heightRecOptions)
 }
 void Menu::drawTitle(Vector2 pos,int fontSize,Color color)
 {
-	DrawText("PONG",pos.x - (fontSize+20), pos.y, fontSize, color);
+	DrawText("PONG",static_cast<int>(pos.x - (fontSize+20)), static_cast<int>(pos.y), fontSize, color);
 }
 void Menu::instrucctionsPlayer(int fontSize,int posY)
 {
@@ -44,4 +44,7 @@ void Menu::draw(Vector2 posTitle, int fontSize, Color colorTitle,int PosYInstruc
 	instrucctionsPlayer(fontSize/5,PosYInstrucctions);
 	drawTitle(posTitle,fontSize,colorTitle);
 	EndDrawing();
+}
+void Menu::update(Player* p1, Player* p2) { 
+	
 }

@@ -1,6 +1,8 @@
 #ifndef Player_H
 #define Player_H
 #include "raylib.h"
+#include <iostream>
+using namespace std;
 class Player
 {
 private:
@@ -28,6 +30,7 @@ public:
 	void setSkin(Texture2D skin);
 	Texture2D getSkin();
 	Rectangle getRectangle();
+	void move(int x, int y);
 
 };
 #endif
