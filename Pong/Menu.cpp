@@ -45,6 +45,8 @@ void Menu::draw(Vector2 posTitle, int fontSize, Color colorTitle,int PosYInstruc
 	drawTitle(posTitle,fontSize,colorTitle);
 	EndDrawing();
 }
-void Menu::update(Player* p1, Player* p2) { 
-	
+void Menu::update(Player* p1, Player* p2) 
+{ 
+	p1->selectorMove(p2->getColorType());
+	p2->selectorMove(p1->getColorType());
 }
