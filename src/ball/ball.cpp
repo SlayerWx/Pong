@@ -3,11 +3,11 @@
 ball::ball()
 {
 	VelBallon = { 0, 0 };
-	ballPosition = {GetScreenWidth()/2,GetScreenHeight()/2};
+//	ballPosition = {GetScreenWidth()/2,GetScreenHeight()/2};
 }
 void ball::goPosition()
 {
-	ballPosition = { GetScreenWidth() / 2,GetScreenHeight() / 2 };
+	//ballPosition = { GetScreenWidth() / 2,GetScreenHeight() / 2 };
 }
 void ball::move()
 {

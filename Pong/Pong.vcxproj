@@ -110,6 +110,14 @@
       <AdditionalDependencies>raylib.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Console</SubSystem>
     </Link>
+    <PostBuildEvent>
+      <Command>copy "$(SolutionDir)Pong\raylib.dll" "$(OutDir)" /Y
+mkdir "$(OutDir)img" /y
+mkdir "$(OutDir)sound" /y
+xcopy "$(SolutionDir)img" "$(OutDir)img" /s /y
+xcopy "$(SolutionDir)sound" "$(OutDir)sound"  /s /y
+</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -123,6 +131,11 @@
       <AdditionalLibraryDirectories>$(SolutionDir)\raylib-2.5.0-Win32-msvc15\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>opengl32.lib;raylib.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>copy "$(SolutionDir)Pong\raylib.dll" "$(OutDir)"
+copy "$(SolutionDir)img" "$(OutDir)"
+copy "$(SolutionDir)sound" "$(OutDir)"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -142,6 +155,14 @@
       <SubSystem>Windows</SubSystem>
       <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
     </Link>
+    <PostBuildEvent>
+      <Command>copy "$(SolutionDir)Pong\raylib.dll" "$(OutDir)" /Y
+mkdir "$(OutDir)img" /y
+mkdir "$(OutDir)sound" /y
+xcopy "$(SolutionDir)img" "$(OutDir)img" /s /y
+xcopy "$(SolutionDir)sound" "$(OutDir)sound"  /s /y
+</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -159,6 +180,11 @@
       <AdditionalLibraryDirectories>$(SolutionDir)\raylib-2.5.0-Win32-msvc15\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>opengl32.lib;raylib.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>copy "$(SolutionDir)Pong\raylib.dll" "$(OutDir)"
+copy "$(SolutionDir)img" "$(OutDir)"
+copy "$(SolutionDir)sound" "$(OutDir)"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
