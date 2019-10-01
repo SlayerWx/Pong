@@ -1,48 +1,90 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Archivos de origen">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="img">
+      <UniqueIdentifier>{170fd23e-0abb-46bb-86f9-0de4aad63eec}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Archivos de encabezado">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    <Filter Include="sound">
+      <UniqueIdentifier>{8ce8dc05-ed45-46c5-a12b-0d5d04bd8412}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Archivos de recursos">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="src">
+      <UniqueIdentifier>{31808ad3-b82d-4c13-98c7-bf88464f6fc8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\colorSelector">
+      <UniqueIdentifier>{88262152-2fe4-473c-834c-dfb5f68c766e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\game">
+      <UniqueIdentifier>{1dc9aa8d-cf0a-4176-a76a-0cc71eebf0f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\menu">
+      <UniqueIdentifier>{1ec47864-51fa-4671-8a8f-75d61c00139e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\objectPlayable">
+      <UniqueIdentifier>{822ca0d5-1dfd-4409-a633-df06234a4e3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\player">
+      <UniqueIdentifier>{7fd2ce57-d721-49d6-a67b-374f489d1006}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\raylib">
+      <UniqueIdentifier>{497dca96-544f-422c-98de-69363fd3f13a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\campOfGame">
+      <UniqueIdentifier>{449f2658-785c-456f-ac71-18cfe0b71504}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\ball">
+      <UniqueIdentifier>{570ab723-2844-4c64-a2ba-ce2797326ffe}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Source.cpp">
-      <Filter>Archivos de origen</Filter>
+    <ClCompile Include="..\src\main.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="Player.cpp">
-      <Filter>Archivos de origen</Filter>
+    <ClCompile Include="..\src\colorSelector\colorsSelector.cpp">
+      <Filter>src\colorSelector</Filter>
     </ClCompile>
-    <ClCompile Include="Juego.cpp">
-      <Filter>Archivos de origen</Filter>
+    <ClCompile Include="..\src\game\game.cpp">
+      <Filter>src\game</Filter>
     </ClCompile>
-    <ClCompile Include="Menu.cpp">
-      <Filter>Archivos de origen</Filter>
+    <ClCompile Include="..\src\menu\Menu.cpp">
+      <Filter>src\menu</Filter>
     </ClCompile>
-    <ClCompile Include="ObjectPlayable.cpp">
-      <Filter>Archivos de origen</Filter>
+    <ClCompile Include="..\src\objectPlayable\ObjectPlayable.cpp">
+      <Filter>src\objectPlayable</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\player\Player.cpp">
+      <Filter>src\player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\campOfGame\campOfGame.cpp">
+      <Filter>src\campOfGame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ball\ball.cpp">
+      <Filter>src\ball</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Player.h">
-      <Filter>Archivos de encabezado</Filter>
+    <ClInclude Include="..\src\colorSelector\colorsSelector.h">
+      <Filter>src\colorSelector</Filter>
     </ClInclude>
-    <ClInclude Include="Juego.h">
-      <Filter>Archivos de encabezado</Filter>
+    <ClInclude Include="..\src\game\game.h">
+      <Filter>src\game</Filter>
     </ClInclude>
-    <ClInclude Include="Menu.h">
-      <Filter>Archivos de encabezado</Filter>
+    <ClInclude Include="..\src\menu\Menu.h">
+      <Filter>src\menu</Filter>
     </ClInclude>
-    <ClInclude Include="ObjectPlayable.h">
-      <Filter>Archivos de encabezado</Filter>
+    <ClInclude Include="..\src\objectPlayable\ObjectPlayable.h">
+      <Filter>src\objectPlayable</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\player\Player.h">
+      <Filter>src\player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\raylib\include\raylib.h">
+      <Filter>src\raylib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\campOfGame\campOfGame.h">
+      <Filter>src\campOfGame</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ball\ball.h">
+      <Filter>src\ball</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

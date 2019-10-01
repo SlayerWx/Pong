@@ -1,6 +1,6 @@
 #ifndef OBJECTPLAYABLE_H
 #define OBJECTPLAYABLE_H
-#include "raylib.h"
+#include "raylib/include/raylib.h"
 #include <iostream>
 class ObjectPlayable
 {
@@ -9,11 +9,8 @@ public:
 	{
 		white, Red, Blue, green, Orange, Violet
 	};
-	virtual void move();
 	ObjectPlayable();
-	ObjectPlayable(int x, int y, int newSpeed, int height, int width);
-	void selectorMove(colorType enemyColorType);
-	void checkCollision(Vector2 ballPosition, Vector2 ballVel);
+	ObjectPlayable(float x, float y, float newSpeed, float height, float width);
 	void setColor(Color color);
 	Color getColor();
 	void increaseScore();
@@ -22,15 +19,17 @@ public:
 	void resetGlobalScore();
 	void setSkin(Texture2D skin);
 	Texture2D getSkin();
-	Rectangle getRectangle();
+	Rectangle getBody();
 	colorType getColorType();
 	void setColorType(colorType newColorType);
+	void setY(int Y);
 private:
-	Rectangle body;
-	float speed;
 	int score;
 	int globalScore;
 	Texture2D mySkin;
 	colorType myColorType;
+protected:
+	Rectangle body;
+	float speed;
 };
 #endif
